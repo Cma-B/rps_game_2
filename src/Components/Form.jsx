@@ -1,18 +1,22 @@
 import React from 'react'
 
 const Form = props => {
-    return (
-        <form>
-<label>Enter Your Name!</label>
-<input
-id="name"
-name="name"
-placeholder="Name"
-/>
-<button id="play">Start Gaming</button>
-</form>
+  return (
+    <form>
+      <label htmlFor="name">Enter Your Name!</label>
+      <input
+        type="text"
+        required
+        placeholder="name"
+        id="name"
+        name="name"
+        value={props.name}
+        onChange={props.onChangeHandler}
+      />
+      <button id="play">Click Me!</button>
+    </form>
 
-    );
+  );
 }
 
 export default Form;

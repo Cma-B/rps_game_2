@@ -13,7 +13,7 @@ describe('Form', () => {
     />
   );
   it("renders with name prop", () => {
-    expect(wrapper.find("#name").props().value.toEqual("Sima"));
+    expect(wrapper.find("#name").props().value).toEqual("Sima");
   });
 
   it("on change the onChangeHandler is being called", () => {
