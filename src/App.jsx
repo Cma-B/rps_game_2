@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
+import Form from "./Components/Form"
 
 class App extends Component {
   render() {
-    return (
-      <form>
-        <label>Enter Your Name!</label>
-        <input
-        id="name"
-        name="name"
-        placeholder="Name"
-        />
-        <button id="play">Start Gaming</button>
-      </form>
-    );
+    return <Form />
   }
 }
 
