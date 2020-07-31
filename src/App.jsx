@@ -13,12 +13,17 @@ class App extends Component {
     return (
      <>
      <h1>Rock Paper Scissors</h1>
-     <button id='rock'>Rock</button>
-     <button id='paper'>Paper</button>
-     <button id='scissors'>Scissors</button>
      <div>
        <Player />
      </div>
+     <div>
+     <button id='rock' className='weaponBtn'>Rock</button>
+     <button id='paper' className='weaponBtn'>Paper</button>
+     <button id='scissors' className='weaponBtn'>Scissors</button>
+     </div>
+     <div className="winner">Winner</div>
+
+     <button id="start">Start</button>
 
      </> 
     )
