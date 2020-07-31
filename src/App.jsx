@@ -1,35 +1,29 @@
-import React, { Component } from 'react';
-import Form from "./Components/Form"
-import {clickMe} from "./helpers/welcomeHelper";
+import React, { Component } from "react";
+import Player from './Components/Player'
 
+const weapons = ['rock', 'paper', 'scissors'];
 class App extends Component {
   state = {
-  name: "",
-  welcomeMessage: ""
-  };
+    playerOne: weapons[0],
+    playerTwo: weapons[0],
+    winner: ""
+  }
 
-  onChangeHandler = e => this.setState({ [e.target.name]: e.target.value })
-  
-  onSubmitHandler = e => {
-    e.preventDefault();
-    const [welcomeMessage] = clickMe(
-      this.state.name
-    );
-    this.setState({ welcomeMessage: welcomeMessage})
-  };
-  
   render() {
-
     return (
-      <div>
-        <Form
-          name={this.state.name}
-          onChangeHandler={this.onChangeHandler}
-          onSubmitHandler={this.onSubmitHandler}
-        />
-      </div>
-    );
+     <>
+     <h1>Rock Paper Scissors</h1>
+     <button id='rock'>Rock</button>
+     <button id='paper'>Paper</button>
+     <button id='scissors'>Scissors</button>
+     <div>
+       <Player />
+     </div>
+
+     </> 
+    )
   }
 }
+
 
 export default App;
