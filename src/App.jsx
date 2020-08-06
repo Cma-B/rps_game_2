@@ -1,34 +1,43 @@
-import React, { Component } from "react";
-import Player from './Components/Player'
+import React, { Component } from 'react';
 
-const weapons = ['rock', 'paper', 'scissors'];
+
 class App extends Component {
   state = {
-    playerOne: weapons[0],
-    playerTwo: weapons[0],
-    winner: ""
+    user: "",
+    welcomeMessage: ""
+  };
+
+  onChangeHandler = e => {
+    debugger
+    this.setState({ [e.target.name]: e.target.value})
   }
 
+  onSubmitHandler = e => {
+    e.preventDefault();
+    debugger
+    this.setState({ welcomeMessage: `Hello ${this.state.user}, Let's play Rock Paper Scissors`})
+  }
   render() {
     return (
-     <>
-     <h1>Rock Paper Scissors</h1>
-     <div>
-       <Player />
-     </div>
-     <div>
-     <button id='rock' className='weaponBtn'>Rock</button>
-     <button id='paper' className='weaponBtn'>Paper</button>
-     <button id='scissors' className='weaponBtn'>Scissors</button>
-     </div>
-     <div className="winner">Winner</div>
-
-     <button id="start">Start</button>
-
-     </> 
-    )
+      <div>
+      <form>
+       
+        <input
+        type="text"
+        required
+        placeholder="name"
+        name="user"
+        id="user"
+        value={this.setState.user}
+        onChange={this.onChangeHandler}
+        />
+      <button id="start" onClick={this.onSubmitHandler}>Start</button>
+     
+      <p id="welcome-message">{this.state.welcomeMessage}</p>
+      </form>
+      </div>
+    );
   }
 }
-
 
 export default App;
