@@ -8,6 +8,10 @@ describe(' user can see welcome message', () => {
     cy.get('input#user').type('Sima')
     cy.get('button#start').contains("Start").click()
     cy.get('p#welcome-message').should("contain", "Hello Sima, Let's play Rock Paper Scissors")
+    cy.contains("Make Your Selection")
+    cy.get('i#rock').should('be.visible').click()
+    cy.get('i#paper').should('be.visible').click()
+    cy.get('i#scissors').should('be.visible').click()
 
   })
 })

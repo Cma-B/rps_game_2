@@ -2,6 +2,7 @@ import React from "react";
 
 const Form = props => {
   return (
+    <div>
     <form onSubmit={props.onSubmitHandler}>
     <input
       type="text"
@@ -14,6 +15,7 @@ const Form = props => {
     />
     <button id="start">Start</button>
   </form>
+  </div>
   )
 }
 export default Form;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from "./Components/Form";
+import Icons from "./Components/Icons";
 
 class App extends Component {
   state = {
@@ -14,7 +15,10 @@ class App extends Component {
   onSubmitHandler = e => {
     e.preventDefault();
     this.setState({ welcomeMessage: `Hello ${this.state.user}, Let's play Rock Paper Scissors` })
-  }
+  };
+  
+
+
   render() {
     return (
       <div>
@@ -26,6 +30,10 @@ class App extends Component {
         <p id="welcome-message">
           {this.state.welcomeMessage}
         </p>
+        {this.state.welcomeMessage && (
+         <Icons/>
+        )}
+     
       </div>
     );
   }
