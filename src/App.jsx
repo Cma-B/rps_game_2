@@ -15,15 +15,15 @@ class App extends Component {
 
   onChangeHandler = e => {
     this.setState({ user: e.target.value })
-  }
-
+  };
   onSubmitHandler = e => {
     e.preventDefault();
     this.setState({ welcomeMessage: `Hello ${this.state.user}, Let's play Rock Paper Scissors` })
   };
 
-  onSelectkHandler = e => {
-    debugger;
+
+  onClickHandler = e => {
+  
     this.setState({ playerChoice: e.target.value })
   }
 
@@ -46,7 +46,7 @@ class App extends Component {
         {this.state.welcomeMessage && (
           <Choices
             playerChoice={this.state.playerChoice}
-            onSelectHandler={this.onSelectHandler}
+            onClickHandler={this.onClickHandler}
           />
         )}
       </div>
