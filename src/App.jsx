@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
 import Form from "./Components/Form";
-import Icons from "./Components/Icons";
+import Choices from "./Components/Choices";
+import { playGame } from "./helpers/rpsHelper";
+
 
 class App extends Component {
   state = {
     user: "",
-    welcomeMessage: ""
+    welcomeMessage: "",
+    playerChoice: "",
+    computerChoice: "",
+    winner: ""
   };
 
   onChangeHandler = e => {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ user: e.target.value })
   }
 
   onSubmitHandler = e => {
     e.preventDefault();
     this.setState({ welcomeMessage: `Hello ${this.state.user}, Let's play Rock Paper Scissors` })
   };
+
+  onSelectkHandler = e => {
+    debugger;
+    this.setState({ playerChoice: e.target.value })
+  }
+
+
+
   
 
 
@@ -31,9 +44,11 @@ class App extends Component {
           {this.state.welcomeMessage}
         </p>
         {this.state.welcomeMessage && (
-         <Icons/>
+          <Choices
+            playerChoice={this.state.playerChoice}
+            onSelectHandler={this.onSelectHandler}
+          />
         )}
-     
       </div>
     );
   }

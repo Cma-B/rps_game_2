@@ -1,7 +1,32 @@
+
+:root {
+  --primary-color: #003699;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+  --modal-duration: 1s;
+}
+
 body {
   text-align: center;
   font-size: 30px;
   padding: 12rem;
   font-family: Bradley Hand, cursive;
 
+}
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.choice {
+  cursor: pointer;
+}
+
+.choice:hover {
+  color: var(--primary-color);
 }
