@@ -1,55 +1,48 @@
 import React, { Component } from 'react';
-import Form from "./Components/Form";
-import Choices from "./Components/Choices";
-import { playGame } from "./helpers/rpsHelper";
-
 
 class App extends Component {
   state = {
-    user: "",
-    welcomeMessage: "",
-    playerChoice: "",
-    computerChoice: "",
-    winner: ""
+  playerChoice: "",
+  computerChoice: ""
   };
 
-  onChangeHandler = e => {
-    this.setState({ user: e.target.value })
-  };
-  onSubmitHandler = e => {
-    e.preventDefault();
-    this.setState({ welcomeMessage: `Hello ${this.state.user}, Let's play Rock Paper Scissors` })
-  };
-
-
-  onClickHandler = e => {
-  
-    this.setState({ playerChoice: e.target.value })
-  }
-
-
-
-  
-
-
+onChangeHandler = e => {
+  this.setState ({playerChoice: e.target.id})
+}
+onComputerChoiceHandler = () => {
+  const rand = Math.random()
+    if (rand < 0.34) {
+      this.setState ({ computerChoice: "Rock"})
+     } else if (rand <= 0.67) {
+       this.setState ({ computerChoice: "Paper"})
+     } else {
+       this.setState ({ computerChoice: "Scissors"})
+     }
+}
   render() {
     return (
-      <div>
-        <Form
-          user={this.state.user}
-          onChangeHandler={this.onChangeHandler}
-          onSubmitHandler={this.onSubmitHandler}
-        />
-        <p id="welcome-message">
-          {this.state.welcomeMessage}
-        </p>
-        {this.state.welcomeMessage && (
-          <Choices
-            playerChoice={this.state.playerChoice}
-            onClickHandler={this.onClickHandler}
-          />
-        )}
-      </div>
+      <>
+<p>Make your Choice</p>
+<div  name="playerChoice" id="playerChoice" value="playerChoice" onClick={this.onComputerChoiceHandler}>
+           <i value="rock" onClick={this.onChangeHandler}
+           id="rock" className="choice fa fa-hand-rock-o fa-5x"></i>
+          <i value="paper" onClick={this.onChangeHandler}
+          id="paper" className="choice fa fa-hand-paper-o fa-5x"></i>
+          <i value="scissors" onClick={this.onChangeHandler}
+           id="scissors" className="choice fa fa-hand-scissors-o fa-5x"></i>
+           {this.state.plyerChoice}
+</div>
+{this.state.playerChoice && (
+  <div>
+  <h3>You Chose {this.state.playerChoice}</h3>
+  <h3>Computer Chose {this.state.computerChoice}</h3>
+  </div>
+)}
+ 
+
+  
+  
+      </>
     );
   }
 }
