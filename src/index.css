@@ -11,15 +11,16 @@
 body {
   text-align: center;
   font-size: 30px;
-  padding: 12rem;
+  padding: 3rem;
   font-family: Bradley Hand, cursive;
+  background-color: gray
 
 }
 #player-choice{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin-top: 3rem;
+  grid-gap: 1rem;
+  margin-top: 5rem;
   text-align: center;
 }
 
