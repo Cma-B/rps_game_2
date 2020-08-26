@@ -85,9 +85,8 @@ class App extends Component {
         </div>
         {this.state.playerChoice && (
           <div>
-            <h3>You'r choice: {this.state.playerChoice}</h3>
-            <h3>Computer choice: {this.state.computerChoice}
-            </h3>
+            <h3 id="p-choice">You'r choice: {this.state.playerChoice}</h3>
+            <h3 id="computer">Computer choice: {this.state.computerChoice}</h3>
             <h2 id="result">{this.state.result}</h2>
           </div>
         )}
