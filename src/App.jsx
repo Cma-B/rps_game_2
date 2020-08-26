@@ -5,6 +5,8 @@ class App extends Component {
     playerChoice: "",
     computerChoice: "",
     result: "",
+    playerScore: 0,
+    computerScore: 0
   };
 
   playGame = (e) => {
@@ -35,20 +37,26 @@ class App extends Component {
       return "It's a draw";
     } else if (playerChoice === 'rock') {
       if (computerChoice === 'paper') {
+        this.setState({ computerScore: this.state.computerScore + 1 })
         return 'You lost';
       } else {
+        this.setState({ playerScore: this.state.playerScore + 1 })
         return 'You won!';
       }
     } else if (playerChoice === 'paper') {
       if (computerChoice === 'scissors') {
+        this.setState({ computerScore: this.state.computerScore + 1 })
         return 'You lost';
       } else {
+        this.setState({ playerScore: this.state.playerScore + 1 })
         return 'You won!';
       }
     } else if (playerChoice === 'scissors') {
       if (computerChoice === 'rock') {
+        this.setState({ computerScore: this.state.computerScore + 1 })
         return 'You lost';
       } else {
+        this.setState({ playerScore: this.state.playerScore + 1 })
         return 'You won!';
       }
     }
@@ -59,6 +67,10 @@ class App extends Component {
       <>
         <h1 id="title">Let's play Rock Paper Scissors</h1>
         <p id="message">Make your choice</p>
+        <div className="score">
+        <p id="p-score">You: {this.state.playerScore}</p>
+        <p id="c-score">Computer: {this.state.computerScore}</p>
+        </div>
         <div
           name="player-choice"
           id="player-choice"
