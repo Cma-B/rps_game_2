@@ -1,21 +1,19 @@
-
 :root {
-  --primary-color: #003699; 
+  --primary-color: #003699;
 }
 
 body {
   text-align: center;
-  font-size: 30px;
-  padding: 1rem;
+  font-size: 25px;
   font-family: Bradley Hand, cursive;
-  background-color: lightcyan
-
+  background-color: lightcyan;
 }
-#player-choice{
+
+#player-choice {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  margin-top: 5rem;
+  grid-gap: 1px;
+  margin-top: 3rem;
   text-align: center;
 }
 
@@ -28,11 +26,11 @@ body {
 }
 
 #result {
-  font-size: 30px;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
-#score{
+
+#score {
   margin-left: 8rem;
   margin-right: 8rem;
   display: grid;
@@ -53,5 +51,4 @@ body {
   cursor: pointer;
   outline: none;
   border-radius: 10px;
-  margin-bottom: 1rem;
 }

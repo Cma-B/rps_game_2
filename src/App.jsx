@@ -35,46 +35,69 @@ class App extends Component {
   getWinner = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
       return "It's a draw";
+
     } else if (playerChoice === 'rock') {
       if (computerChoice === 'paper') {
-        this.setState({ computerScore: this.state.computerScore + 1 })
+        this.setState({
+          computerScore: this.state.computerScore + 1
+        })
         return 'You lost';
+
       } else {
-        this.setState({ playerScore: this.state.playerScore + 1 })
+        this.setState({
+          playerScore: this.state.playerScore + 1
+        })
         return 'You won!';
       }
+
     } else if (playerChoice === 'paper') {
       if (computerChoice === 'scissors') {
-        this.setState({ computerScore: this.state.computerScore + 1 })
+        this.setState({
+          computerScore: this.state.computerScore + 1
+        })
         return 'You lost';
+
       } else {
-        this.setState({ playerScore: this.state.playerScore + 1 })
+        this.setState({
+          playerScore: this.state.playerScore + 1
+        })
         return 'You won!';
       }
+
     } else if (playerChoice === 'scissors') {
       if (computerChoice === 'rock') {
-        this.setState({ computerScore: this.state.computerScore + 1 })
+        this.setState({
+          computerScore: this.state.computerScore + 1
+        })
         return 'You lost';
+
       } else {
-        this.setState({ playerScore: this.state.playerScore + 1 })
+        this.setState({
+          playerScore: this.state.playerScore + 1
+        })
         return 'You won!';
       }
     }
   };
 
   refreshPage = () => {
-		window.location.reload(false);
-	}
+    window.location.reload(false);
+  }
 
   render() {
     return (
       <>
         <h1 id="title">Let's play Rock Paper Scissors</h1>
-        <button id="restart" onClick={this.refreshPage}>Restart Game</button>
+        <button id="restart"
+          onClick={this.refreshPage}
+        >Restart Game
+        </button>
         <p id="message">Make your choice</p>
         <div id="score">
-        <p id="p-score">You: {this.state.playerScore}</p>
-        <p id="c-score">Computer: {this.state.computerScore}</p>
+          <p id="p-score">
+            You: {this.state.playerScore}</p>
+          <p id="c-score">
+            Computer: {this.state.computerScore}</p>
         </div>
         <div
           name="player-choice"
@@ -102,9 +125,13 @@ class App extends Component {
         </div>
         {this.state.playerChoice && (
           <div>
-            <h3 id="p-choice">You'r choice: {this.state.playerChoice}</h3>
-            <h3 id="computer">Computer choice: {this.state.computerChoice}</h3>
-            <h2 id="result">{this.state.result}</h2>
+            <h3 id="p-choice">
+              You'r choice: {this.state.playerChoice}</h3>
+            <h3 id="computer">
+              Computer choice: {this.state.computerChoice}</h3>
+            <h2 id="result">
+              {this.state.result}
+            </h2>
           </div>
         )}
       </>
