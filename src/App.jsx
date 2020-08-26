@@ -32,24 +32,24 @@ class App extends Component {
 
   getWinner = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
-      return 'draw';
+      return "It's a draw";
     } else if (playerChoice === 'rock') {
       if (computerChoice === 'paper') {
-        return 'lost';
+        return 'You lost';
       } else {
-        return 'win';
+        return 'You won!';
       }
     } else if (playerChoice === 'paper') {
       if (computerChoice === 'scissors') {
-        return 'lost';
+        return 'You lost';
       } else {
-        return 'win';
+        return 'You won!';
       }
     } else if (playerChoice === 'scissors') {
       if (computerChoice === 'rock') {
-        return 'lost';
+        return 'You lost';
       } else {
-        return 'win';
+        return 'You won!';
       }
     }
   };
@@ -85,9 +85,10 @@ class App extends Component {
         </div>
         {this.state.playerChoice && (
           <div>
-            <h3>You Chose {this.state.playerChoice}</h3>
-            <h3>Computer Chose {this.state.computerChoice}</h3>
-            <h3>{this.state.result}</h3>
+            <h3>You'r choice: {this.state.playerChoice}</h3>
+            <h3>Computer choice: {this.state.computerChoice}
+            </h3>
+            <h2 id="result">{this.state.result}</h2>
           </div>
         )}
       </>

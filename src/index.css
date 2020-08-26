@@ -1,19 +1,14 @@
 
 :root {
-  --primary-color: #003699;
-  --dark-color: #333333;
-  --light-color: #f4f4f4;
-  --lose-color: #dc3545;
-  --win-color: #28a745;
-  --modal-duration: 1s;
+  --primary-color: #003699; 
 }
 
 body {
   text-align: center;
   font-size: 30px;
-  padding: 3rem;
+  padding: 1rem;
   font-family: Bradley Hand, cursive;
-  background-color: gray
+  background-color: lightcyan
 
 }
 #player-choice{
@@ -30,4 +25,10 @@ body {
 
 .choice:hover {
   color: var(--primary-color);
+}
+
+#result {
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
 }
