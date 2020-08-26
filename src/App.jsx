@@ -62,12 +62,17 @@ class App extends Component {
     }
   };
 
+  refreshPage = () => {
+		window.location.reload(false);
+	}
+
   render() {
     return (
       <>
         <h1 id="title">Let's play Rock Paper Scissors</h1>
+        <button id="restart" onClick={this.refreshPage}>Restart Game</button>
         <p id="message">Make your choice</p>
-        <div className="score">
+        <div id="score">
         <p id="p-score">You: {this.state.playerScore}</p>
         <p id="c-score">Computer: {this.state.computerScore}</p>
         </div>

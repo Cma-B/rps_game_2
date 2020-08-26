@@ -32,7 +32,9 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
-.score{
+#score{
+  margin-left: 8rem;
+  margin-right: 8rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-size: 1.2rem;
@@ -40,4 +42,16 @@ body {
   background: var(--primary-color);
   border-radius: 10px;
   grid-gap: 2rem;
+}
+
+#restart {
+  background: var(--primary-color);
+  color: #fff;
+  font-family: Bradley Hand, cursive;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
