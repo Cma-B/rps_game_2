@@ -5,7 +5,7 @@ describe("user can play RPS", () => {
 
   it("display the game result if user choose Rock", () => {
     cy.get("i#rock").click()
-    cy.get("h3#p-choice").should("contain", "You'r choice: rock")
+    cy.get("h3#p-choice").should("contain", "Your choice: rock")
     cy.get("#computer").then(($computer) => {
       if ($computer.text().includes("Computer choice: scissors")) {
         cy.get("h2#result").should("contain", "You won!")
@@ -22,7 +22,7 @@ describe("user can play RPS", () => {
 
   it("display the game result if user choose Paper", () => {
     cy.get("i#paper").click()
-    cy.get("h3#p-choice").should("contain", "You'r choice: paper")
+    cy.get("h3#p-choice").should("contain", "Your choice: paper")
     cy.get("#computer").then(($computer) => {
       if ($computer.text().includes("Computer choice: rock")) {
         cy.get("h2#result").should("contain", "You won!")
@@ -39,7 +39,7 @@ describe("user can play RPS", () => {
 
   it("display the game result if user choose Scissors", () => {
     cy.get("i#scissors").click()
-    cy.get("h3#p-choice").should("contain", "You'r choice: scissors")
+    cy.get("h3#p-choice").should("contain", "Your choice: scissors")
     cy.get("#computer").then(($computer) => {
       if ($computer.text().includes("Computer choice: paper")) {
         cy.get("h2#result").should("contain", "You won!")
