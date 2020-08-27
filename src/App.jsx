@@ -80,7 +80,7 @@ class App extends Component {
     }
   };
 
-  refreshPage = () => {
+  restartGame = () => {
     window.location.reload(false);
   }
 
@@ -89,7 +89,7 @@ class App extends Component {
       <>
         <h1 id="title">Let's play Rock Paper Scissors</h1>
         <button id="restart"
-          onClick={this.refreshPage}
+          onClick={this.restartGame}
         >Restart Game
         </button>
         <p id="message">Make your choice</p>
