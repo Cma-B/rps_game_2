@@ -19,6 +19,7 @@ To run the test run below command on the terminal:
 ### `yarn cy:open`
 
 #### Deployment
+(https://rock-paper-scissors-challenge-2020.netlify.app)<br>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e9060959-bcd9-4a3e-9bda-44924a56b377/deploy-status)](https://app.netlify.com/sites/rock-paper-scissors-challenge-2020/deploys)
 
 ## Acknowledgement
