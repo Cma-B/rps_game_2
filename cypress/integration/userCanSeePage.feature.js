@@ -2,7 +2,7 @@ describe("user can see RPS game page", () => {
   beforeEach(() => {
     cy.visit("/")
   })
-  it("user can see the options to choose", () => {
+  it("user can see the title, button and options to choose ", () => {
     cy.get("h1#title").should("contain", "Let's play Rock Paper Scissors")
     cy.get("button#restart").click()
     cy.get("#p-score").should("be.visible")

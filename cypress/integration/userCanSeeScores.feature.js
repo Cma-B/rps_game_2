@@ -1,4 +1,4 @@
-describe("user can see the score", () => {
+describe("user can see the scores", () => {
   before(() => {
     cy.visit("/", {
       onBeforeLoad: (game) => {
